@@ -4,7 +4,7 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import logoFooter from "../assets/images/logoFooter.jpg";
 import footerImage from "../assets/images/footer-image.jpg";
-import { GiHamburgerMenu } from "react-icons/Gi";
+import { GiHamburgerMenu } from "react-icons/GI";
 import { MdClose } from "react-icons/Md";
 import { SiTiktok } from "react-icons/Si";
 import {
