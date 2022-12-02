@@ -4,7 +4,7 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import logoFooter from "../assets/images/logoFooter.jpg";
 import footerImage from "../assets/images/footer-image.jpg";
-import { GiHamburgerMenu } from "react-icons/GI";
+import { GoThreeBars } from "react-icons/Go";
 import { MdClose } from "react-icons/Md";
 import { SiTiktok } from "react-icons/Si";
 import {
@@ -25,7 +25,7 @@ const LayOut = () => {
             <img src={logo} alt="logo de empresa" />
           </Link>
         </div>
-        <GiHamburgerMenu
+        <GoThreeBars
           className="burgerButton"
           onClick={() => setIsOpenNav(true)}
         />
