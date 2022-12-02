@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
-import styled from "styled-components";
-import logo from "../assets/images/logo.png";
-import logoFooter from "../assets/images/logoFooter.jpg";
-import footerImage from "../assets/images/footer-image.jpg";
-import { GoThreeBars } from "react-icons/Go";
-import { MdClose } from "react-icons/Md";
-import { SiTiktok } from "react-icons/Si";
 import {
   BsFacebook,
-  BsTwitter,
+  BsGoogle,
+  BsInstagram,
   BsLinkedin,
   BsPinterest,
-  BsInstagram,
-  BsGoogle,
+  BsTwitter,
 } from "react-icons/Bs";
+import { VscThreeBars } from "react-icons/vsc";
+import { MdClose } from "react-icons/Md";
+import { SiTiktok } from "react-icons/Si";
+import { Link, Outlet } from "react-router-dom";
+import styled from "styled-components";
+import footerImage from "../assets/images/footer-image.jpg";
+import logo from "../assets/images/logo.png";
+import logoFooter from "../assets/images/logoFooter.jpg";
 const LayOut = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   return (
@@ -25,7 +25,7 @@ const LayOut = () => {
             <img src={logo} alt="logo de empresa" />
           </Link>
         </div>
-        <GoThreeBars
+        <VscThreeBars
           className="burgerButton"
           onClick={() => setIsOpenNav(true)}
         />
