@@ -41,6 +41,11 @@ body {
   color: ${({ theme }) => theme.color.secondaryColor};
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 h2 {
   font-size: 1rem;
   font-weight: 400;

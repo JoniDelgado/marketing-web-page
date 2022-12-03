@@ -20,6 +20,7 @@ import hagamosHistoria from "../assets/images/hagamoshistoria.png";
 import compartimosHistorias from "../assets/images/compartimoshistorias.png";
 import instaImage from "../assets/images/compartimoshistorias-imagen.png";
 import Contact from "../components/Contact";
+import { Link } from "react-router-dom";
 
 const ButtonImages = [CarrouselButtonBack, CarrouselButtonFace];
 const workImage = [
@@ -115,18 +116,18 @@ const Home = () => {
           <p>
             Gestionamos la compra de <strong>medios offline y online</strong>,
             hacemos crecer <strong>redes sociales</strong>, mejoramos
-            posicionamiento <strong>SEO y SEM</strong>. Diseñamos{" "}
-            <strong>páginas web</strong>, generamos<strong> contenidos</strong>{" "}
+            posicionamiento <strong>SEO y SEM</strong>. Diseñamos
+            <strong>páginas web</strong>, generamos<strong> contenidos</strong>
             en diversos formatos y para distintos soportes, y creamos
             <strong> audiovisuales</strong>. También instalamos cualquier tipo
-            de <strong>soporte publicitario</strong> y{" "}
+            de <strong>soporte publicitario</strong> y
             <strong>organizamos eventos</strong>. Todo desde nuestros
             departamentos especializados coordinados con una dirección de
             campaña.
           </p>
           <div>
             <p>
-              Esto nos ha hecho ser una{" "}
+              Esto nos ha hecho ser una
               <strong>agencia de publicidad especializada</strong>en sectores
               como:
             </p>
@@ -139,7 +140,7 @@ const Home = () => {
               </span>
             </p>
             <p>
-              Somos una{" "}
+              Somos una
               <strong>agencia creativa, atípica y multidiciplinar</strong>
             </p>
           </div>
@@ -160,7 +161,9 @@ const Home = () => {
               Que cuenten todo lo que quieres <strong>comunicar</strong>.
             </p>
           </div>
-          <button>Ver Historias</button>
+          <button>
+            <Link to="/History">Ver Historias</Link>
+          </button>
         </StyleMakeHistory>
         <StyleShareHistory>
           <div>
