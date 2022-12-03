@@ -1,20 +1,11 @@
 import React, { useState } from "react";
-import {
-  BsFacebook,
-  BsGoogle,
-  BsInstagram,
-  BsLinkedin,
-  BsPinterest,
-  BsTwitter,
-} from "react-icons/Bs";
-import { VscThreeBars } from "react-icons/vsc";
-import { MdClose } from "react-icons/Md";
-import { SiTiktok } from "react-icons/Si";
 import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
+import { Icons } from "../assets/icons/Icons";
 import footerImage from "../assets/images/footer-image.jpg";
 import logo from "../assets/images/logo.png";
 import logoFooter from "../assets/images/logoFooter.jpg";
+
 const LayOut = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   return (
@@ -25,17 +16,17 @@ const LayOut = () => {
             <img src={logo} alt="logo de empresa" />
           </Link>
         </div>
-        <VscThreeBars
-          className="burgerButton"
+        <Icons
+          className="burgerIcon"
+          icon="bars"
           onClick={() => setIsOpenNav(true)}
         />
         <StyleNav isOpenNav={isOpenNav}>
-          {
-            <MdClose
-              className="exitButton"
-              onClick={() => setIsOpenNav(false)}
-            />
-          }
+          <Icons
+            icon="close"
+            className="exitButton"
+            onClick={() => setIsOpenNav(false)}
+          />
           <ul>
             <li>
               <Link onClick={() => setIsOpenNav(false)} to="/">
@@ -62,13 +53,13 @@ const LayOut = () => {
             <img src={logoFooter} alt="logo de empresa" />
           </div>
           <div>
-            <BsFacebook className="socialIcon" />
-            <BsTwitter className="socialIcon" />
-            <BsLinkedin className="socialIcon" />
-            <BsPinterest className="socialIcon" />
-            <BsInstagram className="socialIcon" />
-            <BsGoogle className="socialIcon" />
-            <SiTiktok className="socialIcon" />
+            <Icons icon="facebook" className="socialIcon" />
+            <Icons icon="twitter" className="socialIcon" />
+            <Icons icon="linkedin" className="socialIcon" />
+            <Icons icon="pinterest" className="socialIcon" />
+            <Icons icon="instagram" className="socialIcon" />
+            <Icons icon="google" className="socialIcon" />
+            <Icons icon="tiktok" className="socialIcon" />
           </div>
           <div>
             <i>Aviso Legal</i>
@@ -105,10 +96,10 @@ const StyledHeader = styled.header`
     }
   }
 
-  .burgerButton {
-    font-size: 2rem;
+  .burgerIcon {
+    width: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.color.secondaryColor};
+    fill: ${({ theme }) => theme.color.secondaryColor};
 
     @media screen and (min-width: 700px) {
       display: none;
@@ -150,10 +141,11 @@ const StyleNav = styled.nav`
     }
   }
   .exitButton {
+    width: 1.2rem;
     position: absolute;
     top: 10%;
     right: 10%;
-    color: ${({ theme }) => theme.color.secondaryColor};
+    fill: ${({ theme }) => theme.color.secondaryColor};
     cursor: pointer;
   }
 
@@ -204,9 +196,16 @@ const StyleFooterLeft = styled.div`
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
+
     .socialIcon {
-      font-size: 1.3rem;
-      color: ${({ theme }) => theme.color.secondaryColor};
+      width: 8%;
+      max-width: 1.7rem;
+      fill: ${({ theme }) => theme.color.secondaryColor};
+      transition: fill linear 0.2s;
+
+      &:hover {
+        fill: ${({ theme }) => theme.color.primaryColor};
+      }
     }
   }
 
